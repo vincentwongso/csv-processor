@@ -1,0 +1,24 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Acme\\CsvProcessor\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Acme\\CsvProcessorTest\\": "tests"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox --colors=auto tests"
+  },
+  "require": {
+    "aws/aws-sdk-php": "^3.69"
+  }
+}
