@@ -33,7 +33,7 @@ $ composer test
 
 There are 2 ways to run the application.
 
-1. Process csv file by specifying the location of the csv and processor type.
+1. **Process csv file by specifying the location of the csv and processor type.**
 ```bash
 $ php app.php --type=CashTransfer ./data/uploads/test.csv
 ```
@@ -44,7 +44,7 @@ For demonstration purposes, 2 test files are provided in the project directory: 
 Currently the output directory is hardcoded to `./data/results` directory. For the future it can be moved to the cli option similar to input file or separate config file. 
 
 
-2. Process csv file via Queue.
+2. **Process csv file via Queue.**
 ```bash
 $ php app.php
 ```
