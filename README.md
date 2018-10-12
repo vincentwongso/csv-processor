@@ -39,9 +39,9 @@ $ php app.php --type=CashTransfer ./data/uploads/test.csv
 ```
 Currently there is only one processor type which is `CashTransfer` processor. So when we add a new type, e.g: cash adjustment processor. We can simply change the type to `--type=CashAdjustment`, of course with the assumption that we have implemented `CashAdjusment` class.
 
-For demonstration purposes 2 test files are provided in the project directory: `./data/uploads`.
+For demonstration purposes, 2 test files are provided in the project directory: `./data/uploads`.
 
-At the moment the output directory is always located at `./data/results` directory. For the future it can be moved to the cli option similar to input file or separate config file. 
+Currently the output directory is hardcoded to `./data/results` directory. For the future it can be moved to the cli option similar to input file or separate config file. 
 
 
 2. Process csv file via Queue.
@@ -51,7 +51,7 @@ $ php app.php
 
 If we didn't pass any option and argument the script will try to get the next item from the Queue (currently only mock object).
  
-The idea is to implement the queue with AWS SQS but currently we only have `QueueHelper` that return mock data.
+The idea is to implement the queue with AWS SQS but currently `QueueHelper` only return mock data.
 
 If the queue is not empty, it will process the next in queue but if there is no item in the queue it will not do anything. 
 It assume that the queue is populated by other application (e.g user/staff member upload csv document via web UI).
