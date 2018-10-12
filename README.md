@@ -71,8 +71,12 @@ The idea is if in the future we want to connect to real application we simply cr
 ## Assumptions
 1. The application assumes that the underlying business logic like cash transfer, invalid currency logic, csv file validation, etc will not be implemented literally. 
 But for the purpose of testing we've created a few supporting mock class like `AccountService` to simulate transfer and to add the `Invalid Currency` logic. The CSV input file validation logic are very simple and it only relies on the examples given in the test instructions.
-2. The application assumes that the Csv Processor will be able to process the csv file quickly (under 5 minutes) and not memory intensive.
+
+2. The application is using mock data to simulate the Account Transfer.
+
 3. The application assumes that the input filename is unique and the output filename is always the same and the only thing that is different is the directory (`./data/results` folder for output and `./data/uploads` folder for input).
+
+4. The application assumes that the upload process is handled by other application (via UI) and placed in the uploads folder or if it uses queue it will be stored in the queue message payload.
 
 
 ## Future Ideas
