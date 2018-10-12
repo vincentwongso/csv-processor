@@ -66,11 +66,11 @@ Since this project is not connected to any database or web service to get accoun
 
 We use `AccountMockDataRepository` with hardcoded data in this class.
 
-The idea is if in the future we want to connect to real application we simply create new DataRepository that implements the DataRepositoryInterface. The implementation detail can be anything (e.g: database or web service).
+The idea is if in the future we want to connect to real application we can simply create new DataRepository that implements the DataRepositoryInterface. The implementation detail can be anything (e.g: database or web service).
 
 ## Assumptions
 1. The application assumes that the underlying business logic like cash transfer, invalid currency logic, csv file validation, etc will not be implemented literally. 
-But for the purpose of testing we've created a few supporting mock class like `AccountService` to simulate transfer and to add the `Invalid Currency` logic. The CSV input file validation logic are very simple and it only relies on the examples given in the test instructions.
+But for the purpose of testing I've created a few supporting mock class like `AccountService` to simulate transfer and to add the `Invalid Currency` logic. The CSV input file validation logic are very simple and it only relies on the examples given in the test instructions.
 
 2. The application is using mock data to simulate the Account Transfer.
 
